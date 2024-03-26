@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+  --font-size-paragraphs: 16px;
+}
+
+body {
+  background-color: var(--Light-pink);
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  place-content: center;
+  margin-top: 100px;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 0;
+}
+
+button:hover {
+  color: purple;
+}
+
+.container {
+  background: var(--White);
+  max-width: 500px;
+  padding: 1.7rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 15px 15px 150px rgba(19, 18, 18, 0.247);
+}
+
+.faq__heading {
+  display: flex;
+  gap: 2rem;
+}
+
+.faq__heading h1 {
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+
+.according__container .according__item:last-child {
+  border-bottom: 2px solid var(--Light-pink);
+}
+
+.according__item .icons img {
+  min-width: 30px;
+}
+
+.according__item .icons .minus__icon {
+  display: none;
+}
+
+.according__description {
+  background: var(--White);
+  max-height: 100px;
+  display: none;
+  transition: max-height 0.5s linear;
+}
+
+.according__description p {
+  color: var(--Grayish-purple);
+  padding: 0.8rem 0;
+}
+
+@media (max-width: 540px) {
+  body {
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+  }
+}
